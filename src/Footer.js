@@ -1,9 +1,9 @@
 import React from 'react';
 
 function Footer() {
-    return (
+    return(
         <footer>
-            <h3>Footer is here..</h3>
+            <p>lorem ipsum hujipsum</p>
         </footer>
     )
 }
