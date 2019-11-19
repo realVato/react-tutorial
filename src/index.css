@@ -8,13 +8,11 @@ body {
   background-color: #ccc;
 }
 
-form {
+.to-do-item {
   display: flex;
-  flex-direction: column;
 }
 
-form button {
-  max-width: 120px;
-  background-color: #222;
-  color: #fff;
+.to-do-item p {
+  margin: 0;
+  margin-left: 0.5rem;
 }
