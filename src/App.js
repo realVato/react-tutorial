@@ -1,20 +1,33 @@
 import React from 'react';
 
 function App() {
+
+    const date = new Date();
+    const hours = date.getHours();
+    let timeOfDay;
+
+    if (hours < 12) {
+        timeOfDay = 'morning'
+    } else if (hours > 12 && hours < 17) {
+        timeOfDay = 'good afternoon'
+    } else {
+        timeOfDay = 'good evening'
+    }
+
     return(
         <div>
             <h1>Checkboxes</h1>
-            <form>
+            <form className='form'>
                 <div>
-                    <input type='checkbox'></input><span>i have paper</span>
+                    <input type='checkbox' /><span>i have paper</span>
                 </div>
                 <div>
-                    <input type='checkbox'></input><span>i have fire</span>
+                    <input type='checkbox' /><span>i have fire</span>
                 </div>
                 <div>
-                    <input type='checkbox'></input><span>i have lyrics</span>
+                    <input type='checkbox' /><span>i have lyrics</span>
                 </div>
-                <button>song</button>
+                <button>{timeOfDay}</button>
             </form>
         </div>
     )
