@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ContactCard = props => 
+const ContactCard = props =>
     <div className='contact-card'>
-        <img src = {props.imgUrl} />
-        <h1>{props.name}</h1>
-        <p>PHONE: {props.phone}</p>
-        <p>EMAIL: {props.email}</p>
+        <img src = {props.contact.imgUrl} />
+        <h1>{props.contact.name}</h1>
+        <p>PHONE: {props.contact.phone}</p>
+        <p>EMAIL: {props.contact.email}</p>
     </div>
 
 export default ContactCard
