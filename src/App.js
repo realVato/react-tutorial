@@ -1,52 +1,29 @@
 import React from 'react'
-import ContactCard from './ContactCard'
+import Joke from './Joke'
 
 const App = () => 
-    <div className='contacts'>
-        <ContactCard 
-            contact=
-            {
-                {
-                    name: 'MR.CAT',
-                    imgUrl: 'https://source.unsplash.com/200x150/?cat',
-                    phone: '+89148929',
-                    email: 'meoww321@yes.com'
-                }
-            }
+    <div>
+        <Joke 
+            question = 'What does a nosey pepper do?'
+            answer = 'Gets jalapeno business!'
         />
-
-        <ContactCard 
-            contact = {
-                {
-                    name: 'Showoff',
-                    imgUrl: 'https://source.unsplash.com/200x151/?cat',
-                    phone: '+84287123',
-                    email: 'shekspier3@yahoo.meow'
-                }
-            }
+        <Joke 
+            question = 'What do you call a fake noodle?'
+            answer = 'An Impasta'
         />
-
-        <ContactCard 
-            contact = {
-                {
-                    name: 'professional',
-                    imgUrl: 'https://source.unsplash.com/200x152/?cat',
-                    phone: '+81321123',
-                    email: 'emailme@no.yes'
-                }
-            }
+        <Joke 
+            question = ' What do you call an alligator in a vest?'
+            answer = 'An Investigator'
         />
-
-        <ContactCard 
-            contact = {
-                {
-                    name: 'mr.whiskerson',
-                    imgUrl: 'https://source.unsplash.com/200x153/?cat',
-                    phone: '+39710692',
-                    email: 'balloon@ride.org'
-                }
-            }
+        <Joke 
+            question = 'What happens if you eat yeast and shoe polish?'
+            answer = 'Every morning you’ll rise and shine!'
+        />
+        <Joke 
+            question = 'What’s the difference between a guitar and a fish?'
+            answer = 'You can’t tuna fish.'
         />
     </div>
- 
+
+
 export default App
