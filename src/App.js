@@ -72,21 +72,39 @@ import React from "react"
 //     }
 // }
 
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             name: 'Tommy G',
+//             age: 20
+//         }
+//     }
+
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.name}</h1>
+//                 <h3>{this.state.age} years old</h3>
+//             </div>
+//         )    
+//     }
+// }
+
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            name: 'Tommy G',
-            age: 20
+            isLoggedIn: true
         }
     }
+    
     render() {
         return (
             <div>
-                <h1>{this.state.name}</h1>
-                <h3>{this.state.age} years old</h3>
+                <h1>You are currently logged {this.state.isLoggedIn ? 'in' : 'out'}</h1>
             </div>
-        )    
+        )   
     }
 }
 
