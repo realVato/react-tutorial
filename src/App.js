@@ -51,21 +51,42 @@ import React from "react"
 //     }
 // }
 
+
+// STATE
+
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             answer: "Yes"
+//         }
+//     }
+    
+//     render() {
+//         return (
+//             <div>
+//                 <h1>Is state important to know? {this.state.answer}</h1>
+//                 <ChildComponent answer={this.state.answer}/>
+//             </div>
+//         )
+//     }
+// }
+
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            answer: "Yes"
+            name: 'Tommy G',
+            age: 20
         }
     }
-    
     render() {
         return (
             <div>
-                <h1>Is state important to know? {this.state.answer}</h1>
-                <ChildComponent answer={this.state.answer}/>
+                <h1>{this.state.name}</h1>
+                <h3>{this.state.age} years old</h3>
             </div>
-        )
+        )    
     }
 }
 
