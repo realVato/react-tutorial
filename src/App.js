@@ -1,4 +1,6 @@
 import React from "react"
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
 // function App(props) {
     
@@ -91,20 +93,41 @@ import React from "react"
 //     }
 // }
 
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             isLoggedIn: true
+//         }
+//     }
+//         render() {
+//             return (
+//                 <div>
+//                     <h1>You are currently logged {this.state.isLoggedIn ? 'in' : 'out'}</h1>
+//                 </div>
+//             )
+//         }
+// }
+
+// Phase 4
+
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            isLoggedIn: true
+            todos: todosData
         }
     }
-        render() {
-            return (
-                <div>
-                    <h1>You are currently logged {this.state.isLoggedIn ? 'in' : 'out'}</h1>
-                </div>
-            )
-        }
+    
+    render() {
+        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+        
+        return (
+            <div className="todo-list">
+                {todoItems}
+            </div>
+        )
+    }
 }
 
 export default App
