@@ -1,4 +1,6 @@
 import React from "react"
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
 // function App(props) {
     
@@ -130,21 +132,42 @@ import React from "react"
 
 // Handling events
 
-function handleClick() {
-    console.log("I was clicked")
-}
+// function handleClick() {
+//     console.log("I was clicked")
+// }
 
-// https://reactjs.org/docs/events.html#supported-events
+// // https://reactjs.org/docs/events.html#supported-events
 
-function App() {
-    return (
-        <div>
-            <img onMouseOver={handleClick} src="https://www.fillmurray.com/200/100"/>
-            <br />
-            <br />
-            <button onClick={handleClick}>Click me</button>
-        </div>
-    )
+// function App() {
+//     return (
+//         <div>
+//             <img onMouseOver={handleClick} src="https://www.fillmurray.com/200/100"/>
+//             <br />
+//             <br />
+//             <button onClick={handleClick}>Click me</button>
+//         </div>
+//     )
+// }
+
+// Phase 5
+
+class App extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+            todos: todosData
+        }
+    }
+    
+    render() {
+        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
+        
+        return (
+            <div className="todo-list">
+                {todoItems}
+            </div>
+        )    
+    }
 }
 
 export default App
