@@ -178,13 +178,31 @@ class App extends React.Component {
         this.state = {
             count: 0
         }
-        this.handleClick = this.handleClick.bind(this)
+        this.halfSum = this.halfSum.bind(this)
+        this.addOne = this.addOne.bind(this)
+        this.doubleSum = this.doubleSum.bind(this)
     }
     
-    handleClick() {
+    halfSum() {
+        this.setState(prevState => {
+            return {
+                count: prevState.count / 2
+            }
+        })
+    }
+    
+    addOne() {
         this.setState(prevState => {
             return {
                 count: prevState.count + 1
+            }
+        })
+    }
+    
+    doubleSum() {
+        this.setState(prevState => {
+            return {
+                count: prevState.count * 2
             }
         })
     }
@@ -193,7 +211,9 @@ class App extends React.Component {
         return (
             <div>
                 <h1>{this.state.count}</h1>
-                <button onClick={this.handleClick}>Change!</button>
+                <button onClick={this.halfSum}>Reduce by half!</button>
+                <button onClick={this.addOne}>Increase by 1!</button>
+                <button onClick={this.doubleSum}>Double up!</button>
             </div>
         )
     }
