@@ -1,6 +1,6 @@
 import React from "react"
-// import TodoItem from "./TodoItem"
-// import todosData from "./todosData"
+import TodoItem from "./TodoItem"
+import todosData from "./todosData"
 
 // function App(props) {
     
@@ -172,50 +172,87 @@ import React from "react"
 
 // set State()
 
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             count: 0
+//         }
+//         this.halfSum = this.halfSum.bind(this)
+//         this.addOne = this.addOne.bind(this)
+//         this.doubleSum = this.doubleSum.bind(this)
+//     }
+    
+//     halfSum() {
+//         this.setState(prevState => {
+//             return {
+//                 count: prevState.count / 2
+//             }
+//         })
+//     }
+    
+//     addOne() {
+//         this.setState(prevState => {
+//             return {
+//                 count: prevState.count + 1
+//             }
+//         })
+//     }
+    
+//     doubleSum() {
+//         this.setState(prevState => {
+//             return {
+//                 count: prevState.count * 2
+//             }
+//         })
+//     }
+    
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.count}</h1>
+//                 <button onClick={this.halfSum}>Reduce by half!</button>
+//                 <button onClick={this.addOne}>Increase by 1!</button>
+//                 <button onClick={this.doubleSum}>Double up!</button>
+//             </div>
+//         )
+//     }
+// }
+
+// Phase 6
+
 class App extends React.Component {
     constructor() {
         super()
         this.state = {
-            count: 0
+            todos: todosData
         }
-        this.halfSum = this.halfSum.bind(this)
-        this.addOne = this.addOne.bind(this)
-        this.doubleSum = this.doubleSum.bind(this)
+        this.handleChange = this.handleChange.bind(this)
     }
     
-    halfSum() {
+     handleChange(id) {
         this.setState(prevState => {
+            const isUpdated = prevState.todos.map(todo => {
+                if (todo.id === id) {
+                    todo.completed = !todo.completed
+                }
+                return todo
+            })
             return {
-                count: prevState.count / 2
-            }
-        })
-    }
-    
-    addOne() {
-        this.setState(prevState => {
-            return {
-                count: prevState.count + 1
-            }
-        })
-    }
-    
-    doubleSum() {
-        this.setState(prevState => {
-            return {
-                count: prevState.count * 2
+                todos: isUpdated
             }
         })
     }
     
     render() {
+        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
+        handleChange={this.handleChange} />)
+        
         return (
-            <div>
-                <h1>{this.state.count}</h1>
-                <button onClick={this.halfSum}>Reduce by half!</button>
-                <button onClick={this.addOne}>Increase by 1!</button>
-                <button onClick={this.doubleSum}>Double up!</button>
+            <div className="todo-list">
+                {todoItems}
             </div>
-        )
+        )    
     }
 }
 
