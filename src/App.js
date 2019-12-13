@@ -221,41 +221,81 @@ import todosData from "./todosData"
 
 // Phase 6
 
-class App extends React.Component {
+// class App extends React.Component {
+//     constructor() {
+//         super()
+//         this.state = {
+//             todos: todosData
+//         }
+//         this.handleChange = this.handleChange.bind(this)
+//     }
+    
+//      handleChange(id) {
+//         this.setState(prevState => {
+//             const isUpdated = prevState.todos.map(todo => {
+//                 if (todo.id === id) {
+//                     return {
+//                         ...todo,
+//                         completed: !todo.completed
+//                     }
+//                 }
+//                 return todo
+//             })
+//             return {
+//                 todos: isUpdated
+//             }
+//         })
+//     }
+    
+//     render() {
+//         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
+//         handleChange={this.handleChange} />)
+        
+//         return (
+//             <div className="todo-list">
+//                 {todoItems}
+//             </div>
+//         )    
+//     }
+// }
+
+// Lifecycle methods part 1
+
+// https://engineering.musefind.com/react-lifecycle-methods-how-and-when-to-use-them-2111a1b692b1
+// https://reactjs.org/blog/2018/03/29/react-v-16-3.html#component-lifecycle-changes
+
+class TodoList extends Component {
     constructor() {
         super()
-        this.state = {
-            todos: todosData
-        }
-        this.handleChange = this.handleChange.bind(this)
+        this.state = {}
     }
     
-     handleChange(id) {
-        this.setState(prevState => {
-            const isUpdated = prevState.todos.map(todo => {
-                if (todo.id === id) {
-                    return {
-                        ...todo,
-                        completed: !todo.completed
-                    }
-                }
-                return todo
-            })
-            return {
-                todos: isUpdated
-            }
-        })
+    componentDidMount() {
+        // GET the data I need to correctly display
+    }
+    
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.whatever !== this.props.whatever) {
+            // do something important here
+        }
+    }
+    
+    shouldComponentUpdate(nextProps, nextState) {
+        // return true if want it to update
+        // return false if not
+    }
+    
+    componentWillUnmount() {
+        // teardown or cleanup your code before your component disappears
+        // (E.g. remove event listeners)
     }
     
     render() {
-        const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}
-        handleChange={this.handleChange} />)
-        
         return (
-            <div className="todo-list">
-                {todoItems}
+            <div>
+                Code goes here
             </div>
-        )    
+        )
     }
 }
 
