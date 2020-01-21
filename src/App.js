@@ -22,6 +22,26 @@ import todosData from "./todosData"
 //     )
 // }
 
+// Phase 2
+
+// function TodoItem() {
+//     return (
+//         <div>
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+//         </div>
+//     )
+// }
+
 
 // function App(props) {
     
