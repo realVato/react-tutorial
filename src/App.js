@@ -2,6 +2,27 @@ import React from "react"
 import TodoItem from "./TodoItem"
 import todosData from "./todosData"
 
+// PHASE 1
+
+// function App() {
+//     return (
+//         <div>
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+            
+//             <input type="checkbox" />
+//             <p>Placeholder text here</p>
+//         </div>
+//     )
+// }
+
+
 // function App(props) {
     
 //     return (
