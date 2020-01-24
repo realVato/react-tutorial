@@ -86,6 +86,27 @@ import todosData from "./todosData"
 //     )
 // }
 
+// PHASE 3
+
+// function App() {
+//     const todoItem = todosData.map(item => <TodoItem key={item.id} text={item.text} completed={item.completed} />)
+    
+//     return (
+//         <div className="todo-list">
+//             {todoItem}
+//         </div>
+//     )
+// }
+
+// function TodoItem(props) {
+//     return (
+//         <div className="todo-item">
+//             <input type="checkbox" checked={props.completed} />
+//             <p>{props.text}</p>
+//         </div>
+//     )
+// }
+
 // CLASS
 
 // class App extends React.Component {
