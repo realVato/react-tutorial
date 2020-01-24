@@ -63,6 +63,29 @@ import todosData from "./todosData"
 //     )
 // }
 
+// function App() {
+//     const Products = productsData.map(item => 
+//         <Product key={item.id} name={item.name} price={item.price} description={item.description} />
+//     )
+    
+//   return (
+//     <div>
+//         {Products}
+//     </div>
+//   )
+// }
+
+// function Product(props) {
+//     return(
+//         <div>
+//             <h1>{props.name}</h1>
+//             <h2>{props.price}$</h2>
+//             <p>{props.description}</p>
+//             <hr/>
+//         </div>
+//     )
+// }
+
 // CLASS
 
 // class App extends React.Component {
