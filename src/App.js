@@ -212,19 +212,19 @@ import todosData from "./todosData"
 //     constructor() {
 //         super()
 //         this.state = {
-//             todos: todosData
+//             TodoData: todosData
 //         }
 //     }
     
 //     render() {
-//         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
-        
+//         const todoItems = this.state.TodoData.map(item => <TodoItem key={item.id} item={item}/>)
 //         return (
 //             <div className="todo-list">
 //                 {todoItems}
 //             </div>
 //         )
 //     }
+    
 // }
 
 // Handling events
