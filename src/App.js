@@ -196,13 +196,14 @@ import todosData from "./todosData"
 //             isLoggedIn: true
 //         }
 //     }
-//         render() {
-//             return (
-//                 <div>
-//                     <h1>You are currently logged {this.state.isLoggedIn ? 'in' : 'out'}</h1>
-//                 </div>
-//             )
-//         }
+    
+//     render() {
+//         return(
+//             <div>
+//                 <h1>You are currently logged {this.state.isLoggedIn ? "In" : "Out"}</h1>
+//             </div>
+//         )
+//     }
 // }
 
 // Phase 4
