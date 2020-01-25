@@ -255,23 +255,13 @@ import todosData from "./todosData"
 
 // Phase 5
 
-// class App extends React.Component {
-//     constructor() {
-//         super()
-//         this.state = {
-//             todos: todosData
-//         }
-//     }
-    
-//     render() {
-//         const todoItems = this.state.todos.map(item => <TodoItem key={item.id} item={item}/>)
-        
-//         return (
-//             <div className="todo-list">
-//                 {todoItems}
-//             </div>
-//         )    
-//     }
+// function TodoItem(props) {
+//     return (
+//         <div className="todo-item">
+//             <input type="checkbox" onChange={() => console.log("si")}/>
+//             <p>{props.item.text}</p>
+//         </div>
+//     )
 // }
 
 // set State()
