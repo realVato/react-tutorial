@@ -229,8 +229,15 @@ import todosData from "./todosData"
 
 // Handling events
 
-// function handleClick() {
-//     console.log("I was clicked")
+// function App() {
+//     return (
+//         <div>
+//             <img onMouseOver={() => {console.log('Hovered!')}} src="https://www.fillmurray.com/200/100"/>
+//             <br />
+//             <br />
+//             <button onClick={handleClick}>Click me</button>
+//         </div>
+//     )
 // }
 
 // // https://reactjs.org/docs/events.html#supported-events
